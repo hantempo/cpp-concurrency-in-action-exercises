@@ -1,9 +1,12 @@
 # module load gnu/gcc/10.2.0
 
-all : listing2_9
+all : listing2_9 listing3_5
 
 listing2_9: chapter2/listing2_9.cpp
 	g++ -o listing2_9 -lpthread chapter2/listing2_9.cpp
+
+listing3_5: chapter3/listing3_5.cpp
+	g++ -o listing3_5 -lpthread chapter3/listing3_5.cpp
 
 #   helloworld: helloworld.cpp
 #       g++ -o helloworld -lpthread helloworld.cpp
@@ -13,4 +16,4 @@ listing2_9: chapter2/listing2_9.cpp
 
 .PHONY: clean
 clean:
-	rm listing2_9
+	rm listing2_9 listing3_5

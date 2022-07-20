@@ -9,6 +9,7 @@ class accumulate_block
 public:
     void operator()(Iterator first, Iterator last, T& result)
     {
+        std::cout << "thread_id=" << std::this_thread::get_id() << std::endl;
         std::cout << "block_first=" << *first << " block_last=" << *(last-1) << std::endl;
         result = std::accumulate(first, last, result);
         std::cout << "block_result=" << result << std::endl;
@@ -65,7 +66,7 @@ void parallel_accumulate(Iterator first, Iterator last, T &init)
 int main()
 {
     std::vector<unsigned> v;
-    for (unsigned i = 0; i < 100000; ++i)
+    for (unsigned i = 0; i < 100; ++i)
     {
         v.push_back(i);
     }

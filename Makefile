@@ -4,7 +4,7 @@
 CXXFLAGS = -g
 LDFLAGS = -lpthread
 
-executables = listing2_9 listing3_5
+executables = listing2_9 listing3_5 listing3_8
 all : $(executables)
 
 $(executables) : % : %.cpp

@@ -1,3 +1,4 @@
+#include <algorithm>
 #include <future>
 #include <iostream>
 #include <list>
